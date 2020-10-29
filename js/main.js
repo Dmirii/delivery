@@ -181,7 +181,7 @@ const openGoods = (event)=>{
     restaurantTitle.textContent=restName.textContent;
     menuRating.textContent= restRate.textContent;
     menuPrice.textContent=restPrice.textContent;  
-    getData(`./../db/${restarant.dataset.prod}`).then(data => {
+    getData(`./db/${restarant.dataset.prod}`).then(data => {
       data.forEach(createCardGoods);
     })  
     
@@ -201,7 +201,7 @@ logo.addEventListener('click',()=>{
 })
 
 /// all calls
-getData('./../db/partners.json').then(data => {
+getData('./db/partners.json').then(data => {
   data.forEach(createCardsRest);
 })
 checkAuth();
